@@ -1,0 +1,138 @@
+<% if (messages.error) { %>
+    <div class="error-message">
+        <%= messages.error %>
+    </div>
+<% } %>
+
+<style>
+    /* General Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Body Styling */
+    body {
+        background-image: url('IMAGES/login.jpg');
+        background-size: cover;
+        width: 100%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+        font-family: 'Arial', sans-serif;
+    }
+
+    /* Form Styling */
+    form {
+        background: linear-gradient(145deg, rgba(128, 0, 128, 0.9), rgba(75, 0, 130, 0.9));
+        border-radius: 10px;
+        width: 300px;
+        padding: 30px;
+        text-align: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5), inset 0px 0px 15px rgba(255, 255, 255, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    form:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.7), inset 0px 0px 20px rgba(255, 255, 255, 0.15);
+    }
+
+    /* Headings */
+    form h1 {
+        color: white;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    /* Input Fields */
+    form label {
+        display: block;
+        font-size: 14px;
+        color: #e0e0e0;
+        margin-bottom: 5px;
+        text-align: left;
+    }
+
+    form input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        font-size: 14px;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    form input:focus {
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
+    }
+
+    /* Submit Button */
+    form button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 5px;
+        background: linear-gradient(145deg, #ff7f50, #ff4500);
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    form button:hover {
+        background: linear-gradient(145deg, #ff4500, #ff7f50);
+        box-shadow: 0px 4px 15px rgba(255, 69, 0, 0.6);
+    }
+
+    /* Register Link */
+    form a {
+        display: block;
+        margin-top: 20px;
+        color: #00e676;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+    form a:hover {
+        color: #66ffa6;
+    }
+
+    /* Error Message */
+    .error-message {
+        color: #ff5252;
+        font-weight: bold;
+        margin-bottom: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+        box-shadow: 0px 4px 10px rgba(255, 82, 82, 0.5);
+    }
+</style>
+
+<form action="/login" method="POST">
+    <h1>Login</h1>
+    <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+    </div>
+    <button type="submit">Login</button>
+    <a href="/register">Register</a>
+</form>

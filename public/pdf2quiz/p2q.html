@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF to Quiz</title>
+    <link rel="stylesheet" href="pdf2quiz/p2q.css">
+</head>
+<body>
+    <header>
+        <div class="logo">QuizWiz</div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/#features">Features</a></li>
+                <li><a href="Quiz/quiz.html">Quizzes</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="pdf-upload-container">
+            <form id="pdfForm" enctype="multipart/form-data">
+                <h1>Generate Quiz from PDF</h1>
+                <div class="upload-section">
+                    <label for="pdfFile" class="upload-icon">
+                        <img src="/public/IMAGES/attach_file.png" alt="Attach PDF" />
+                    </label>
+                    <input type="file" id="pdfFile" name="pdfFile" accept=".pdf" required style="display: none" />
+                    <span id="file-name">No file selected</span>
+                </div>
+
+                <div class="button-container">
+                    <button type="button" id="change-file" style="display: none;">Change File</button>
+                    <button type="submit" id="generate-quiz" style="display: none;">Generate Quiz</button>
+                </div>
+            </form>
+
+            <div id="output" class="quiz-container"></div>
+
+            <!-- <div id="attempt-quiz-container" style="display: none; text-align: center; margin-top: 20px;">
+                <button id="attempt-quiz-button">Attempt Quiz</button>
+            </div> -->
+            <!-- <div id="download-quiz-container" style="display: none;">
+                <button id="download-quiz-button">Download Quiz Data</button> -->
+            </div>
+            <!-- <div id="view-answers-container" style="display: none;"> -->
+                <!-- <button id="view-answers-button">View/Hide Correct Answers</button> -->
+            </div>
+        </div>
+    </main>
+    <p id="attempt"></p>
+    <script src="pdf2quiz/p2q.js"></script>
+</body>
+</html>

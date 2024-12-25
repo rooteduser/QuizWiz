@@ -1,0 +1,388 @@
+{
+  "math": [
+    {
+      "question": "What is 2 + 2?",
+      "options": ["3", "4", "5", "6"],
+      "correct_answer": "4"
+    },
+    {
+      "question": "What is 10 / 2?",
+      "options": ["3", "5", "7", "9"],
+      "correct_answer": "5"
+    }
+  ],
+  "science": [
+    {
+      "question": "What planet is closest to the sun?",
+      "options": ["Earth", "Venus", "Mercury", "Mars"],
+      "correct_answer": "Mercury"
+    },
+    {
+      "question": "What is H2O commonly known as?",
+      "options": ["Water", "Oxygen", "Hydrogen", "Helium"],
+      "correct_answer": "Water"
+    }
+  ],
+  "ai": [
+    {
+      "question": "What does the term 'Machine Learning' refer to?",
+      "options": [
+        "Algorithm-based learning",
+        "Data-driven learning",
+        "Rule-based learning",
+        "Knowledge-based learning"
+      ],
+      "correct_answer": "Data-driven learning"
+    },
+    {
+      "question": "Which of the following is a supervised learning algorithm?",
+      "options": [
+        "Linear Regression",
+        "K-means",
+        "DBSCAN",
+        "PCA"
+      ],
+      "correct_answer": "Linear Regression"
+    },
+    {
+      "question": "What is the main idea behind 'Supervised Learning'?",
+      "options": [
+        "Learning from labeled data",
+        "Learning from unlabeled data",
+        "Using clustering techniques",
+        "Fitting a line to data"
+      ],
+      "correct_answer": "Learning from labeled data"
+    },
+    {
+      "question": "Which library is commonly used for deep learning in Python?",
+      "options": [
+        "TensorFlow",
+        "Matplotlib",
+        "Numpy",
+        "Scikit-learn"
+      ],
+      "correct_answer": "TensorFlow"
+    },
+    {
+      "question": "Which of the following is an example of unsupervised learning?",
+      "options": [
+        "K-means Clustering",
+        "Logistic Regression",
+        "Decision Tree",
+        "Random Forest"
+      ],
+      "correct_answer": "K-means Clustering"
+    },
+    {
+      "question": "What does the acronym 'AI' stand for?",
+      "options": [
+        "Artificial Intelligence",
+        "Algorithmic Intelligence",
+        "Autonomous Intelligence",
+        "Advanced Intelligence"
+      ],
+      "correct_answer": "Artificial Intelligence"
+    },
+    {
+      "question": "What is the purpose of 'Cross-validation' in machine learning?",
+      "options": [
+        "To evaluate model performance on unseen data",
+        "To tune hyperparameters",
+        "To improve training speed",
+        "To simplify the model"
+      ],
+      "correct_answer": "To evaluate model performance on unseen data"
+    },
+    {
+      "question": "Which type of neural network is commonly used for image classification?",
+      "options": [
+        "Convolutional Neural Network (CNN)",
+        "Recurrent Neural Network (RNN)",
+        "Multilayer Perceptron (MLP)",
+        "Support Vector Machine (SVM)"
+      ],
+      "correct_answer": "Convolutional Neural Network (CNN)"
+    },
+    {
+      "question": "Which of the following is a common evaluation metric for classification problems?",
+      "options": [
+        "Accuracy",
+        "Root Mean Squared Error (RMSE)",
+        "R-Squared",
+        "Confusion Matrix"
+      ],
+      "correct_answer": "Accuracy"
+    },
+    {
+      "question": "Which type of machine learning algorithm is used for spam detection?",
+      "options": [
+        "Supervised Learning",
+        "Unsupervised Learning",
+        "Reinforcement Learning",
+        "Semi-supervised Learning"
+      ],
+      "correct_answer": "Supervised Learning"
+    }
+  ],
+  "cpp": [
+    {
+      "question": "What is the difference between `++i` and `i++` in C++?",
+      "options": [
+        "++i increments `i` before using it, whereas i++ increments `i` after using it.",
+        "There is no difference, both increment `i` before using it.",
+        "Both increment `i` after using it.",
+        "++i increments `i` after using it, whereas i++ increments `i` before using it."
+      ],
+      "correct_answer": "++i increments `i` before using it, whereas i++ increments `i` after using it."
+    },
+    {
+      "question": "Which of the following is used to allocate memory dynamically in C++?",
+      "options": [
+        "malloc()",
+        "calloc()",
+        "new",
+        "All of the above"
+      ],
+      "correct_answer": "All of the above"
+    },
+    {
+      "question": "What is the correct syntax to create a pointer in C++?",
+      "options": [
+        "int* ptr;",
+        "int ptr*;",
+        "ptr int*;",
+        "int ptr;"
+      ],
+      "correct_answer": "int* ptr;"
+    },
+    {
+      "question": "Which operator is used to access members of a class in C++?",
+      "options": [
+        ".",
+        "->",
+        "[]",
+        "{}"
+      ],
+      "correct_answer": "."
+    },
+    {
+      "question": "Which function is used to find the size of a data type in C++?",
+      "options": [
+        "sizeof()",
+        "length()",
+        "size()",
+        "measure()"
+      ],
+      "correct_answer": "sizeof()"
+    }
+  ],
+  "dsa": [
+    {
+      "question": "What is the time complexity of accessing an element in an array by index?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n^2)"
+      ],
+      "correct_answer": "O(1)"
+    },
+    {
+      "question": "What is the time complexity of inserting an element at the beginning of a singly linked list?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n^2)"
+      ],
+      "correct_answer": "O(1)"
+    },
+    {
+      "question": "Which of the following data structures uses LIFO (Last In, First Out) order?",
+      "options": [
+        "Queue",
+        "Stack",
+        "Linked List",
+        "Tree"
+      ],
+      "correct_answer": "Stack"
+    },
+    {
+      "question": "Which data structure is used to implement recursion in most programming languages?",
+      "options": [
+        "Queue",
+        "Stack",
+        "Linked List",
+        "Array"
+      ],
+      "correct_answer": "Stack"
+    },
+    {
+      "question": "Which of the following is a type of binary tree where the left and right subtrees of every node differ in height by at most one?",
+      "options": [
+        "Binary Search Tree",
+        "AVL Tree",
+        "Red-Black Tree",
+        "Heap"
+      ],
+      "correct_answer": "AVL Tree"
+    }
+  ],
+  "os": [
+    {
+      "question": "Which of the following is NOT a function of an operating system?",
+      "options": [
+        "Memory management",
+        "File management",
+        "Network management",
+        "Image editing"
+      ],
+      "correct_answer": "Image editing"
+    },
+    {
+      "question": "What is a process in an operating system?",
+      "options": [
+        "A running program",
+        "A stored file",
+        "A type of storage",
+        "A type of memory"
+      ],
+      "correct_answer": "A running program"
+    },
+    {
+      "question": "What is the purpose of a system call in an operating system?",
+      "options": [
+        "To communicate with the user",
+        "To request a service from the kernel",
+        "To manage hardware resources",
+        "To perform calculations"
+      ],
+      "correct_answer": "To request a service from the kernel"
+    },
+    {
+      "question": "What does the acronym 'FIFO' stand for in the context of operating systems?",
+      "options": [
+        "First In, First Out",
+        "First In, Fixed Out",
+        "Fast Input, Fast Output",
+        "First Instance, First Output"
+      ],
+      "correct_answer": "First In, First Out"
+    },
+    {
+      "question": "What is a deadlock in operating systems?",
+      "options": [
+        "A state where no process can proceed because they are waiting for each other",
+        "A process that takes too long to complete",
+        "A type of memory leak",
+        "A method of task scheduling"
+      ],
+      "correct_answer": "A state where no process can proceed because they are waiting for each other"
+    }
+  ],
+  "java": [
+    {
+      "question": "Which of the following is NOT a valid data type in Java?",
+      "options": [
+        "int",
+        "boolean",
+        "double",
+        "real"
+      ],
+      "correct_answer": "real"
+    },
+    {
+      "question": "What is the default value of an instance variable of type int in Java?",
+      "options": [
+        "0",
+        "null",
+        "undefined",
+        "false"
+      ],
+      "correct_answer": "0"
+    },
+    {
+      "question": "Which method is used to start a thread in Java?",
+      "options": [
+        "start()",
+        "run()",
+        "execute()",
+        "begin()"
+      ],
+      "correct_answer": "start()"
+    },
+    {
+      "question": "What is the correct way to declare a method in Java that returns an integer?",
+      "options": [
+        "int method()",
+        "return int method()",
+        "method int()",
+        "int method() { }"
+      ],
+      "correct_answer": "int method()"
+    },
+    {
+      "question": "Which keyword is used to prevent inheritance in Java?",
+      "options": [
+        "final",
+        "static",
+        "abstract",
+        "private"
+      ],
+      "correct_answer": "final"
+    }
+  ],
+  "python": [
+      {
+        "question": "What is the result of 5 + 3 * 2 in Python?",
+        "options": ["5", "11", "16", "13"],
+        "correct_answer": "11"
+      },
+      {
+        "question": "Which of the following functions is used to read input from the user in Python?",
+        "options": ["input()", "read()", "get()", "scan()"],
+        "correct_answer": "input()"
+      },
+      {
+        "question": "Which data type is used to store whole numbers in Python?",
+        "options": ["float", "int", "str", "list"],
+        "correct_answer": "int"
+      },
+      {
+        "question": "Which of the following is a valid Python variable name?",
+        "options": ["1variable", "variable_1", "variable@1", "_variable1"],
+        "correct_answer": "variable_1"
+      },
+      {
+        "question": "Which of the following is used to define a function in Python?",
+        "options": ["func", "define", "def", "function"],
+        "correct_answer": "def"
+      },
+      {
+        "question": "What is the output of the following code: print(3 + 4 * 2)?",
+        "options": ["10", "11", "14", "20"],
+        "correct_answer": "11"
+      },
+      {
+        "question": "Which of the following is used to create a list in Python?",
+        "options": ["()", "{}", "[]", "<>"],
+        "correct_answer": "[]"
+      },
+      {
+        "question": "What does the following Python code do: len('Python')?",
+        "options": ["Returns the length of the string", "Returns the first character", "Counts spaces", "Reverses the string"],
+        "correct_answer": "Counts characters"
+      },
+      {
+        "question": "Which Python data type is ordered and changeable, and allows duplicate members?",
+        "options": ["tuple", "set", "list", "dictionary"],
+        "correct_answer": "list"
+      },
+      {
+        "question": "Which of the following is the correct syntax to create a dictionary in Python?",
+        "options": ["[]", "{}", "<>", "()"],
+        "correct_answer": "{}"
+      }
+    ]  
+}

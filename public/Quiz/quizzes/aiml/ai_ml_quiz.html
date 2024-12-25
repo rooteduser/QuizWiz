@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI/ML Quiz</title>
+    <link rel="stylesheet" href="ai_ml_quiz.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>AI/ML Quiz</h1>
+        <p>Test your knowledge on Artificial Intelligence and Machine Learning concepts.</p>
+        <div id="timer">Time Left: <span id="time">09:59</span></div>
+        
+        <!-- Question Box -->
+        <div id="question-container" class="question-container">
+            <!-- Question 1 -->
+            <div class="question-box">
+                <p>What does the term "Machine Learning" refer to?</p>
+                <input type="radio" name="q1" value="Algorithm-based learning"><label>Algorithm-based learning</label><br>
+                <input type="radio" name="q1" value="Data-driven learning"><label>Data-driven learning</label><br>
+                <input type="radio" name="q1" value="Rule-based learning"><label>Rule-based learning</label><br>
+                <input type="radio" name="q1" value="Knowledge-based learning"><label>Knowledge-based learning</label><br>
+            </div>
+            
+            <!-- Question 2 -->
+            <div class="question-box">
+                <p>Which of the following is a supervised learning algorithm?</p>
+                <input type="radio" name="q2" value="Linear Regression"><label>Linear Regression</label><br>
+                <input type="radio" name="q2" value="K-means"><label>K-means</label><br>
+                <input type="radio" name="q2" value="DBSCAN"><label>DBSCAN</label><br>
+                <input type="radio" name="q2" value="PCA"><label>PCA</label><br>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-box">
+                <p>What is the main idea behind "Supervised Learning"?</p>
+                <input type="radio" name="q3" value="Learning from labeled data"><label>Learning from labeled data</label><br>
+                <input type="radio" name="q3" value="Learning from unlabeled data"><label>Learning from unlabeled data</label><br>
+                <input type="radio" name="q3" value="Using clustering techniques"><label>Using clustering techniques</label><br>
+                <input type="radio" name="q3" value="Fitting a line to data"><label>Fitting a line to data</label><br>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question-box">
+                <p>Which library is commonly used for deep learning in Python?</p>
+                <input type="radio" name="q4" value="TensorFlow"><label>TensorFlow</label><br>
+                <input type="radio" name="q4" value="Matplotlib"><label>Matplotlib</label><br>
+                <input type="radio" name="q4" value="Numpy"><label>Numpy</label><br>
+                <input type="radio" name="q4" value="Scikit-learn"><label>Scikit-learn</label><br>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question-box">
+                <p>Which of the following is an example of unsupervised learning?</p>
+                <input type="radio" name="q5" value="K-means Clustering"><label>K-means Clustering</label><br>
+                <input type="radio" name="q5" value="Logistic Regression"><label>Logistic Regression</label><br>
+                <input type="radio" name="q5" value="Decision Tree"><label>Decision Tree</label><br>
+                <input type="radio" name="q5" value="Random Forest"><label>Random Forest</label><br>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question-box">
+                <p>What does the acronym "AI" stand for?</p>
+                <input type="radio" name="q6" value="Artificial Intelligence"><label>Artificial Intelligence</label><br>
+                <input type="radio" name="q6" value="Algorithmic Intelligence"><label>Algorithmic Intelligence</label><br>
+                <input type="radio" name="q6" value="Autonomous Intelligence"><label>Autonomous Intelligence</label><br>
+                <input type="radio" name="q6" value="Advanced Intelligence"><label>Advanced Intelligence</label><br>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question-box">
+                <p>What is the purpose of "Cross-validation" in machine learning?</p>
+                <input type="radio" name="q7" value="To evaluate model performance on unseen data"><label>To evaluate model performance on unseen data</label><br>
+                <input type="radio" name="q7" value="To tune hyperparameters"><label>To tune hyperparameters</label><br>
+                <input type="radio" name="q7" value="To improve training speed"><label>To improve training speed</label><br>
+                <input type="radio" name="q7" value="To simplify the model"><label>To simplify the model</label><br>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question-box">
+                <p>Which type of neural network is commonly used for image classification?</p>
+                <input type="radio" name="q8" value="Convolutional Neural Network (CNN)"><label>Convolutional Neural Network (CNN)</label><br>
+                <input type="radio" name="q8" value="Recurrent Neural Network (RNN)"><label>Recurrent Neural Network (RNN)</label><br>
+                <input type="radio" name="q8" value="Multilayer Perceptron (MLP)"><label>Multilayer Perceptron (MLP)</label><br>
+                <input type="radio" name="q8" value="Support Vector Machine (SVM)"><label>Support Vector Machine (SVM)</label><br>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="question-box">
+                <p>Which of the following is a common evaluation metric for classification problems?</p>
+                <input type="radio" name="q9" value="Accuracy"><label>Accuracy</label><br>
+                <input type="radio" name="q9" value="Root Mean Squared Error (RMSE)"><label>Root Mean Squared Error (RMSE)</label><br>
+                <input type="radio" name="q9" value="R-Squared"><label>R-Squared</label><br>
+                <input type="radio" name="q9" value="Confusion Matrix"><label>Confusion Matrix</label><br>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="question-box">
+                <p>Which type of machine learning algorithm is used for spam detection?</p>
+                <input type="radio" name="q10" value="Supervised Learning"><label>Supervised Learning</label><br>
+                <input type="radio" name="q10" value="Unsupervised Learning"><label>Unsupervised Learning</label><br>
+                <input type="radio" name="q10" value="Reinforcement Learning"><label>Reinforcement Learning</label><br>
+                <input type="radio" name="q10" value="Semi-supervised Learning"><label>Semi-supervised Learning</label><br>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="navigation">
+            <button type="button" id="prev-btn">Previous</button>
+            <button type="button" id="next-btn">Next</button>
+        </div>
+
+        <!-- End Quiz Button -->
+        <a href="ai_ml_answers.html"><button type="button" id="end-quiz">End Quiz</button></a>
+    </div>
+
+    <script>
+        // Timer functionality
+        let timer = 600; // 10 minutes in seconds
+        const timeDisplay = document.getElementById("time");
+
+        function updateTimer() {
+            let minutes = Math.floor(timer / 60);
+            let seconds = timer % 60;
+            timeDisplay.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            if (timer > 0) {
+                timer--;
+            } else {
+                clearInterval(timerInterval);
+                alert('Time is up!');
+            }
+        }
+        const timerInterval = setInterval(updateTimer, 1000);
+
+        // Quiz navigation (next, previous, etc.)
+        let currentQuestionIndex = 0;
+        const questions = document.querySelectorAll('.question-box');
+        const nextButton = document.getElementById('next-btn');
+        const prevButton = document.getElementById('prev-btn');
+
+        function showQuestion(index) {
+            questions.forEach((q, i) => {
+                q.style.display = i === index ? 'block' : 'none';
+            });
+            prevButton.style.display = index === 0 ? 'none' : 'inline-block';
+            nextButton.style.display = index === questions.length - 1 ? 'none' : 'inline-block';
+        }
+
+        nextButton.addEventListener('click', () => {
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                showQuestion(currentQuestionIndex);
+            }
+        });
+
+        prevButton.addEventListener('click', () => {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                showQuestion(currentQuestionIndex);
+            }
+        });
+
+        // Show first question initially
+        showQuestion(currentQuestionIndex);
+    </script>
+</body>
+</html>

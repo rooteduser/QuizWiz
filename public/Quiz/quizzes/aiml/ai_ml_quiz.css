@@ -1,0 +1,104 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;  /* Centers content horizontally */
+    align-items: center;      /* Centers content vertically */
+    height: 100vh;            /* Full screen height */
+}
+
+/* Quiz Container Styles */
+.quiz-container {
+    width: 90%;
+    max-width: 900px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Timer Styling */
+#timer {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Question Box Styling */
+.question-container {
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.question-box {
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: left;
+    display: none; /* Hide all questions initially */
+}
+
+.question-box p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.question-box input[type="radio"] {
+    margin: 10px 0;
+}
+
+.question-box label {
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* Navigation Buttons Styling */
+.navigation {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    text-align: center;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#next-btn {
+    background-color: #007bff;
+}
+
+#next-btn:hover {
+    background-color: #0056b3;
+}
+
+#end-quiz {
+    margin-top: 40px;
+    width: 100%;
+    background-color: #dc3545;
+}
+
+#end-quiz:hover {
+    background-color: #c82333;
+}

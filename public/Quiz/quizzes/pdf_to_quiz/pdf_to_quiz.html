@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF to Quiz</title>
+    <link rel="stylesheet" href="pdf_to_quiz.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">QuizWiz</div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/#features">Features</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="quizzes.html">Quizzes</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- PDF to Quiz Section -->
+    <main>
+        <div class="pdf-upload-container">
+            <h1>Generate Quiz from PDF</h1>
+            <div class="upload-section">
+                <!-- Icon for PDF Upload -->
+                <label for="pdf-upload" class="upload-icon">
+                    <img src="/public/IMAGES/attach_file.png" alt="Attach PDF" />
+                
+                </label>
+                <input type="file" id="pdf-upload" accept=".pdf" style="display:none;" />
+                <span id="file-name">No file selected</span>
+            </div>
+            <!-- Button Container -->
+        <div class="button-container">
+            <button id="change-file" style="display:none;">Change File</button>
+            <button id="generate-quiz" style="display:none;" disabled>Generate Quiz</button>
+        </div>
+        </div>
+    </main>
+
+    <script src="pdf_to_quiz.js"></script>
+</body>
+
+</html>

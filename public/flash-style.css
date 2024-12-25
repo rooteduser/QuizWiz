@@ -1,0 +1,230 @@
+/* General Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fa;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+}
+
+header .logo {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 12px 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+/* Navigation Links */
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 6px; /* Add padding for better clickable area */
+    border-radius: 8px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+    color: #fff; /* Change text color on hover */
+    background-color: hwb(128 4% 60% / 0.822); /* Add a background color */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+    transform: translateY(-3px); /* Subtle upward movement */
+}
+
+/* Active State (Optional) */
+nav ul li a.active {
+    background-color: #ff5764; /* Highlight the active link */
+    color: #fff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow for active */
+}
+
+
+/* Main Container */
+.container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+}
+
+/* Title Styling */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #4CAF50;
+  font-weight: 600;
+}
+
+/* Form Container */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input, textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Buttons Container */
+.button-container {
+  margin-top: 20px;
+}
+
+button {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Sets Container */
+.sets-container {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.sets-container h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.sets-container .set {
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sets-container .set:hover {
+  background-color: #0056b3;
+}
+
+/* Quiz Container */
+.quiz-container {
+  display: none;
+  margin-top: 30px;
+}
+
+.quiz-container h2 {
+  font-size: 2rem;
+  color: #4CAF50;
+  margin-bottom: 20px;
+}
+
+.flashcard {
+  background-color: #007bff;
+  color: white;
+  padding: 40px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.flashcard:hover {
+  transform: scale(1.05);
+}
+
+#nextCard {
+  padding: 12px;
+  background-color: #2196F3;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#nextCard:hover {
+  background-color: #1976D2;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  input, textarea, button {
+    width: 100%;
+  }
+
+  .sets-container .set {
+    font-size: 14px;
+  }
+
+  .flashcard {
+    width: 90%;
+    font-size: 1rem;
+  }
+}

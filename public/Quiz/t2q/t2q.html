@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Large Text to Quiz</title>
+    <link rel="stylesheet" href="Quiz/t2q/t2q.css">
+</head>
+<body>
+    <header>
+        <div class="logo">QuizWiz</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Quizzes</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Large Text to Quiz</h1>
+        <p>Upload or paste your text, and we'll generate quiz questions for you.</p>
+        <form id="text-to-quiz-form">
+            <label for="text-input">Enter your text:</label>
+            <textarea id="text-input" rows="10" placeholder="Paste your content here..."></textarea>
+
+            <label for="num-questions">Number of Questions:</label>
+            <!-- <input type="number" id="num-questions" min="1" max="50" value="5"> -->
+
+            <button type="submit" class="btn">Generate Quiz</button>
+        </form>
+
+        <div id="quiz-output" style="display:none;">
+            <!-- Generated quiz questions will appear here -->
+        </div>
+    </div>
+
+    <script src="Quiz/t2q/t2q.js"></script>
+</body>
+</html>

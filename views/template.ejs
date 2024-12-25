@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Quiz</title>
+    <link rel="stylesheet" href="quizzes/template.css"></link>
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz Time!</h1>
+        <p></p>
+        <div id="instructions">
+            <h2>Instructions</h2>
+            <p>Please read the instructions carefully before starting the quiz:</p>
+            <ul>
+                <li>Each question has one correct answer.</li>
+                <li>You cannot go back to previous questions once answered.</li>
+                <li>The quiz will be locked once started.</li>
+                <li>You have 15 seconds to answer each question.</li>
+                <li>Good luck!</li>
+            </ul>
+            <button id="start-button">Start Quiz</button>
+        </div>
+        
+        <div id="quiz" style="display: none;">
+            <h2 id="question"></h2>
+            <div id="timer">Time left: 15s</div>
+            <div id="answers"></div>
+            <button id="next-button">Next Question</button>
+        </div>
+        
+        <div id="result" style="display: none;">
+            <h2>Your Score: <span id="score"></span></h2>
+            <p id="answersp"></p>
+            <button id="restart-button">Restart Quiz</button>
+            <button id="show-answer-button">Show Answer</button> <!-- Hidden initially -->
+        </div>
+        <button id="unpause-button" style="display: none;">Unpause</button>
+    </div>
+    
+    <div id="warning-modal" style="display: none;">
+        <div class="modal-content">
+            <p>You have exited full-screen mode. Your exam will end!</p>
+            <button id="confirm-end">End Exam</button>
+            <button id="cancel-end">Cancel</button>
+        </div>
+    </div>
+    <script src="quizzes/template.js"></script>    
+    <select id="subject-selector" style="display:none;">
+        <option value="math" <%= subject === 'math' ? 'selected' : '' %>>Math</option>
+        <option value="science" <%= subject === 'science' ? 'selected' : '' %>>Science</option>
+        <option value="ai" <%= subject === 'ai' ? 'selected' : '' %>>Artificial Intelligence</option>
+        <option value="cpp" <%= subject === 'cpp' ? 'selected' : '' %>>C++ Basics</option>
+        <option value="dsa" <%= subject === 'dsa' ? 'selected' : '' %>>Data Structures</option>
+        <option value="os" <%= subject === 'os' ? 'selected' : '' %>>Operating Systems</option>
+        <option value="java" <%= subject === 'java' ? 'selected' : '' %>>Java Programming</option>
+        <option value="dbms" <%= subject === 'dbms' ? 'selected' : '' %>>Database Management</option>
+        <option value="chem" <%= subject === 'chem' ? 'selected' : '' %>>Chemistry</option>
+        <option value="html" <%= subject === 'html' ? 'selected' : '' %>>HTML</option>
+        <option value="python" <%= subject === 'python' ? 'selected' : '' %>>Python</option>
+        <!-- <option value="random" <%= subject === 'random' ? 'selected' : '' %>>Random</option> -->
+    </select>
+    
+     
+    
+</body>
+</html>
+

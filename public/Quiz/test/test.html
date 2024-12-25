@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Input</title>
+    <link rel="stylesheet" href="Quiz/test/test.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <header>
+        <div class="logo">Quiz Generator</div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Model Input</h1>
+
+    <div class="input-container">
+        <form id="inputForm">
+            <label for="userInput">Enter Input:</label>
+            <input type="text" id="userInput" name="userInput" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div id="quizContainer"></div>
+
+    <button id="showAnswersBtn" style="display: none;">Show Answers</button>
+
+    <script>
+        document.getElementById('inputForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const userInput = document.getElementById('userInput').value;
+
+            try {
+                const response = await fetch('/api/process', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ input: userInput })
+                });
+
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+                const data = await response.json();
+                
+                let quizHtml = `<h2>${data.quiz_title}</h2>
+                                <ul id="questionsList">`;
+
+                data.questions.forEach((question, index) => {
+                    quizHtml += `<li>
+                                    <strong>Q${index + 1}: ${question.question}</strong>
+                                    <ul>
+                                        ${question.options.map(option => `<li>${option}</li>`).join('')}
+                                    </ul>
+                                    <p class="answer" style="display: none;"><strong>Correct Answer:</strong> ${question.correct_answer}</p>
+                                  </li>`;
+                });
+
+                quizHtml += `</ul>`;
+                document.getElementById('quizContainer').innerHTML = quizHtml;
+
+                // Show "Show Answers" button
+                document.getElementById('showAnswersBtn').style.display = 'inline';
+
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('quizContainer').textContent = 'An error occurred. Please try again.';
+            }
+        });
+
+        document.getElementById('showAnswersBtn').addEventListener('click', () => {
+            const answers = document.querySelectorAll('.answer');
+            answers.forEach(answer => {
+                answer.style.display = 'block';
+            });
+            document.getElementById('showAnswersBtn').style.display = 'none'; // Hide the button after showing answers
+        });
+    </script>
+</body>
+</html>

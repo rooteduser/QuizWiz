@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Quiz Generator | QuizWiz</title>
+    <link rel="stylesheet" href="youtube_to_quiz.css">
+    <script src="youtube_to_quiz.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">QuizWiz</div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/#features">Features</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="quizzes.html">Quizzes</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="input-section">
+            <label for="youtube-url">Enter YouTube Video Link:</label>
+            <input type="text" id="youtube-url" placeholder="Paste the YouTube URL here">
+            <button id="process-video">Process Video</button>
+        </section>
+
+        <!-- Popular YouTube Videos Section -->
+        <section class="popular-videos">
+            <h2>Try with Popular Videos</h2>
+            <div class="video-boxes">
+                <div class="video-box">
+                    <img src="https://img.youtube.com/vi/fr1f84rg4Nw/0.jpg" alt="Video Thumbnail">
+                    <p>Sample Video 1</p>
+                    <button onclick="copyLink('https://youtu.be/fr1f84rg4Nw?si=Hy7JCMVRPK8atk8a')">Copy Link</button>
+                </div>
+                <div class="video-box">
+                    <img src="https://img.youtube.com/vi/kqtD5dpn9C8/0.jpg" alt="Video Thumbnail">
+                    <p>Sample Video 2</p>
+                    <button onclick="copyLink('https://youtu.be/kqtD5dpn9C8?si=I-euXOQt758O9Pjz')">Copy Link</button>
+                </div>
+                <div class="video-box">
+                    <img src="https://img.youtube.com/vi/8XBtAjKwCm4/0.jpg" alt="Video Thumbnail">
+                    <p>Sample Video 3</p>
+                    <button onclick="copyLink('https://youtu.be/8XBtAjKwCm4?si=zvWy-Yc7UPMb9XCL')">Copy Link</button>
+                </div>
+                <div class="video-box">
+                    <img src="https://img.youtube.com/vi/-kGMwaROIZk/0.jpg" alt="Video Thumbnail">
+                    <p>Sample Video 4</p>
+                    <button onclick="copyLink('https://youtu.be/-kGMwaROIZk?si=chX99fDqWJvUDk_i')">Copy Link</button>
+                </div>
+                <div class="video-box">
+                    <img src="https://img.youtube.com/vi/pybhlOhXkiM/0.jpg" alt="Video Thumbnail">
+                    <p>Sample Video 5</p>
+                    <button onclick="copyLink('https://youtu.be/pybhlOhXkiM?si=C0thPQZWVoQ3dk0X')">Copy Link</button>
+                </div>
+                <div class="video-box">
+                    <img src="https://img.youtube.com/vi/ebSZeUoG4iA/0.jpg" alt="Video Thumbnail">
+                    <p>Sample Video 6</p>
+                    <button onclick="copyLink('https://youtu.be/ebSZeUoG4iA?si=0ZDlUZmCcnKzzhAD')">Copy Link</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="quiz-section" id="quiz-section" style="display: none;">
+            <h2>Generated Quiz</h2>
+            <div id="quiz-questions"></div>
+            <button id="generate-quiz" disabled>Generate Quiz</button>
+        </section>
+    </main>
+</body>
+</html>

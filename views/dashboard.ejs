@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="/user_dashboard/dash.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome, <%= user.name %></h1>
+        <button id="logout">Logout</button>
+    </header>
+    <main>
+        <!-- Flashcards Section -->
+        <section id="flashcards">
+            <h2>Your Flashcards</h2>
+            <% if (dashboardData.flashcardSets.length > 0) { %>
+                <% dashboardData.flashcardSets.forEach(set => { %>
+                    <div class="flashcard-set">
+                        <h3><%= set.name %></h3>
+                        <p><%= set.description %></p>
+                        <ul>
+                            <% set.flashcards.forEach(card => { %>
+                                <li>
+                                    <strong>Question:</strong> <%= card.question %> <br />
+                                    <strong>Answer:</strong> <%= card.answer %>
+                                </li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                <% }); %>
+            <% } else { %>
+                <p>No flashcards available.</p>
+            <% } %>
+        </section>
+
+        <!-- Questions Section -->
+        <section id="questions">
+            <h2>Your Questions</h2>
+            <% if (dashboardData.questions.length > 0) { %>
+                <ul>
+                    <% dashboardData.questions.forEach(question => { %>
+                        <li>
+                            <strong>Question:</strong> <%= question.question %> <br />
+                            <strong>Options:</strong> <%= question.options.join(', ') %> <br />
+                            <strong>Correct Answer:</strong> <%= question.correct_answer %>
+                        </li>
+                    <% }); %>
+                </ul>
+            <% } else { %>
+                <p>No questions available.</p>
+            <% } %>
+        </section>
+    </main>
+    <script src="/user_dashboard/dash.js"></script>
+</body>
+</html>

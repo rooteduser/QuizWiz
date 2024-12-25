@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trivia Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Trivia Quiz</h1>
+
+    <div class="form-section">
+      <label for="category">Category:</label>
+      <select id="category">
+        <!-- Categories will be populated dynamically -->
+      </select>
+
+      <label for="difficulty">Difficulty:</label>
+      <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+
+      <label for="question-count">Number of Questions:</label>
+      <input type="number" id="question-count" min="1" max="50" value="5">
+
+      <button id="fetch-questions">Get Questions</button>
+    </div>
+
+    <div id="quiz-section"></div>
+    <button id="get-answers" style="display:none;">Get Answers</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

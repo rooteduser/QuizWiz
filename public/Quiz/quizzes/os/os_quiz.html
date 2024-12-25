@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operating System Quiz</title>
+    <link rel="stylesheet" href="os_quiz.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Operating System Quiz</h1>
+        <p>Test your knowledge on operating system concepts such as processes, memory management, file systems, and more!</p>
+        <div id="timer">Time Left: <span id="time">09:59</span></div>
+        
+        <!-- Question Box -->
+        <div id="question-container" class="question-container">
+            <!-- Question 1 -->
+            <div class="question-box">
+                <p>What is the function of an operating system?</p>
+                <input type="radio" name="q1" value="Manage system resources"><label>Manage system resources</label><br>
+                <input type="radio" name="q1" value="Perform calculations"><label>Perform calculations</label><br>
+                <input type="radio" name="q1" value="Control hardware"><label>Control hardware</label><br>
+                <input type="radio" name="q1" value="All of the above"><label>All of the above</label><br>
+            </div>
+            
+            <!-- Question 2 -->
+            <div class="question-box">
+                <p>Which of the following is an example of an operating system?</p>
+                <input type="radio" name="q2" value="Linux"><label>Linux</label><br>
+                <input type="radio" name="q2" value="Python"><label>Python</label><br>
+                <input type="radio" name="q2" value="Java"><label>Java</label><br>
+                <input type="radio" name="q2" value="MySQL"><label>MySQL</label><br>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-box">
+                <p>Which of the following is a type of operating system process?</p>
+                <input type="radio" name="q3" value="User process"><label>User process</label><br>
+                <input type="radio" name="q3" value="Kernel process"><label>Kernel process</label><br>
+                <input type="radio" name="q3" value="Both of the above"><label>Both of the above</label><br>
+                <input type="radio" name="q3" value="None of the above"><label>None of the above</label><br>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question-box">
+                <p>What is virtual memory in an operating system?</p>
+                <input type="radio" name="q4" value="Temporary storage of data"><label>Temporary storage of data</label><br>
+                <input type="radio" name="q4" value="A form of secondary storage"><label>A form of secondary storage</label><br>
+                <input type="radio" name="q4" value="Memory management technique"><label>Memory management technique</label><br>
+                <input type="radio" name="q4" value="A type of CPU scheduling"><label>A type of CPU scheduling</label><br>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question-box">
+                <p>Which of the following is NOT a file system type?</p>
+                <input type="radio" name="q5" value="NTFS"><label>NTFS</label><br>
+                <input type="radio" name="q5" value="FAT32"><label>FAT32</label><br>
+                <input type="radio" name="q5" value="HDFS"><label>HDFS</label><br>
+                <input type="radio" name="q5" value="RAMFS"><label>RAMFS</label><br>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question-box">
+                <p>What does the term 'multitasking' refer to in an operating system?</p>
+                <input type="radio" name="q6" value="Executing multiple processes at once"><label>Executing multiple processes at once</label><br>
+                <input type="radio" name="q6" value="Single process execution"><label>Single process execution</label><br>
+                <input type="radio" name="q6" value="Multiple users accessing a system"><label>Multiple users accessing a system</label><br>
+                <input type="radio" name="q6" value="Switching between tasks manually"><label>Switching between tasks manually</label><br>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question-box">
+                <p>Which of the following is the main function of the operating system's kernel?</p>
+                <input type="radio" name="q7" value="Manage processes"><label>Manage processes</label><br>
+                <input type="radio" name="q7" value="Memory management"><label>Memory management</label><br>
+                <input type="radio" name="q7" value="Device management"><label>Device management</label><br>
+                <input type="radio" name="q7" value="All of the above"><label>All of the above</label><br>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question-box">
+                <p>What is a system call in an operating system?</p>
+                <input type="radio" name="q8" value="A function that performs an operation directly on the hardware"><label>A function that performs an operation directly on the hardware</label><br>
+                <input type="radio" name="q8" value="A request to the kernel to perform a task"><label>A request to the kernel to perform a task</label><br>
+                <input type="radio" name="q8" value="A command executed by the user"><label>A command executed by the user</label><br>
+                <input type="radio" name="q8" value="A program executed by the OS"><label>A program executed by the OS</label><br>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="question-box">
+                <p>What does the 'deadlock' problem refer to in operating systems?</p>
+                <input type="radio" name="q9" value="When processes are stuck in an infinite loop"><label>When processes are stuck in an infinite loop</label><br>
+                <input type="radio" name="q9" value="When processes cannot access required resources"><label>When processes cannot access required resources</label><br>
+                <input type="radio" name="q9" value="When the system runs out of memory"><label>When the system runs out of memory</label><br>
+                <input type="radio" name="q9" value="When the CPU is overloaded"><label>When the CPU is overloaded</label><br>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="question-box">
+                <p>Which of the following is used to create a process in an operating system?</p>
+                <input type="radio" name="q10" value="fork()"><label>fork()</label><br>
+                <input type="radio" name="q10" value="create()"><label>create()</label><br>
+                <input type="radio" name="q10" value="exec()"><label>exec()</label><br>
+                <input type="radio" name="q10" value="run()"><label>run()</label><br>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="navigation">
+            <button type="button" id="prev-btn">Previous</button>
+            <button type="button" id="next-btn">Next</button>
+        </div>
+
+        <!-- End Quiz Button -->
+        <a href="os_answers.html"><button type="button" id="end-quiz">End Quiz</button></a>
+    </div>
+
+    <script>
+        // Timer functionality
+        let timer = 600; // 10 minutes in seconds
+        const timeDisplay = document.getElementById("time");
+
+        function updateTimer() {
+            let minutes = Math.floor(timer / 60);
+            let seconds = timer % 60;
+            timeDisplay.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            if (timer > 0) {
+                timer--;
+            } else {
+                clearInterval(timerInterval);
+                alert('Time is up!');
+            }
+        }
+        const timerInterval = setInterval(updateTimer, 1000);
+
+        // Quiz navigation (next, previous, etc.)
+        let currentQuestionIndex = 0;
+        const questions = document.querySelectorAll('.question-box');
+        const nextButton = document.getElementById('next-btn');
+        const prevButton = document.getElementById('prev-btn');
+
+        function showQuestion(index) {
+            questions.forEach((q, i) => {
+                q.style.display = i === index ? 'block' : 'none';
+            });
+            prevButton.style.display = index === 0 ? 'none' : 'inline-block';
+            nextButton.style.display = index === questions.length - 1 ? 'none' : 'inline-block';
+        }
+
+        nextButton.addEventListener('click', () => {
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                showQuestion(currentQuestionIndex);
+            }
+        });
+
+        prevButton.addEventListener('click', () => {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                showQuestion(currentQuestionIndex);
+            }
+        });
+
+        // Show first question initially
+        showQuestion(currentQuestionIndex);
+    </script>
+</body>
+</html>

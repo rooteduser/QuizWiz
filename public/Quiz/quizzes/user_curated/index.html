@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Maker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Quiz Maker</h1>
+
+  <!-- Form to create a question -->
+  <div>
+    <h2>Create a Question</h2>
+    <form id="question-form">
+      <input type="text" id="question" placeholder="Enter your question" required>
+      <br>
+      <input type="text" class="option" placeholder="Option 1" required>
+      <input type="text" class="option" placeholder="Option 2" required>
+      <input type="text" class="option" placeholder="Option 3">
+      <input type="text" class="option" placeholder="Option 4">
+      <br>
+      <label for="correct-answer">Correct Answer (e.g., 1 for Option 1):</label>
+      <input type="number" id="correct-answer" required min="1">
+      <br>
+      <button type="submit">Save Question</button>
+    </form>
+  </div>
+
+  <!-- Display existing questions -->
+  <h2>Existing Questions</h2>
+  <ul id="questions-list"></ul>
+
+  <!-- Take Quiz -->
+  <h2>Take the Quiz</h2>
+  <button id="start-quiz">Start Quiz</button>
+  <div id="quiz-container" style="display:none;">
+    <p id="quiz-question"></p>
+    <div id="quiz-options"></div>
+    <button id="submit-answer">Submit Answer</button>
+    <p id="quiz-feedback"></p>
+    <p id="quiz-score"></p> <!-- To display score -->
+    <div id="quiz-answers"></div>  <!-- Display the answers after checking -->
+  </div>
+
+  <script src="script.js">
+  </script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Curate a Quiz - QuizWiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('https://i.pinimg.com/736x/b2/8a/af/b28aafbe8ad4cf67285fadcc612edf34.jpg'); /* Replace with your image URL */
+            background: blur(10px);
+            background-size: cover;
+            background-position: center;
+            font-family: Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(4, 147, 4, 0.8); /* Slight transparency */
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+            text-transform: uppercase;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: white;
+            margin-left: 20px;
+            font-size: 18px;
+        }
+
+        header nav a:hover {
+            color: #ffd700;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #049304; /* Same as header */
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            z-index: 1;
+        }
+
+        .container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: #f8f8f8;
+            width: 50%;
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Added transition */
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        .container.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        .container:hover {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Ensure the timeline circle appears above the line and has a glowing effect */
+        .container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid #005603;
+            top: -12px;
+            border-radius: 50%;
+            z-index: 2; /* Increased z-index to ensure it's in front */
+            box-shadow: 0 0 15px rgba(1, 66, 5, 0.8);
+            animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Animation to make the circle glow dynamically */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 159, 85, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 25px rgb(245, 245, 245), 0 0 50px rgba(255, 159, 85, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 159, 85, 0.5);
+    }
+}
+
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        .right::after {
+            left: -16px;
+        }
+
+        .content {
+            padding: 20px 30px;
+            background-color: rgba(255, 255, 255, 0.8); /* Slight transparency for content */
+            position: relative;
+            border-radius: 6px;
+        }
+
+        .content h2 {
+            color: #01ad27;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        footer {
+            background-color: rgba(20, 119, 3, 0.8); /* Slight transparency */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Media queries - Responsive timeline on screens less than 600px wide */
+        @media screen and (max-width: 600px) {
+            .timeline::after {
+                left: 31px;
+            }
+
+            .container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .container::before {
+                left: 60px;
+                border: medium solid white;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+
+            .left::after, .right::after {
+                left: 15px;
+            }
+
+            .right {
+                left: 0%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>QuizWiz</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/Quiz/quizzes/user_curated/index.html">Curate Quiz</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <div class="content" style="padding: 40px; text-align: center;">
+        <h1>How to Curate a Quiz Using QuizWiz</h1>
+        <p>
+            Curating a quiz using QuizWiz is a fun and simple process that allows you to create engaging quizzes for various topics. Whether you are creating a quiz for learning or for fun, QuizWiz provides all the tools you need.
+        </p>
+        <p>
+            With QuizWiz, you can easily add questions, set parameters, and share your quiz with others. Let’s walk you through the steps to get started with creating your very own quiz.
+        </p>
+        <p>
+            Follow the easy steps below to curate a quiz using QuizWiz and begin testing your knowledge!
+        </p>
+    </div>
+
+    <div class="timeline">
+        <div class="container left">
+            <div class="content">
+                <img src="https://i.pinimg.com/736x/d0/49/87/d04987c9f3710cb4cbed52536755e81a.jpg" alt="Step 1 Icon" width="100%">
+                <h2>Step 1: Choose Your Topic</h2>
+                <p>Select the subject of your quiz. You can pick from a wide range of topics like Python, AI, C++, and more!</p>
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
+                <img src="https://i.pinimg.com/736x/31/7a/e0/317ae09b97a30426d851bbe81808211a.jpg" alt="Step 2 Icon" width="100%">
+                <h2>Step 2: Select Difficulty and Parameters</h2>
+                <p>Choose the difficulty level and parameters for your quiz, including time limits and question formats.</p>
+            </div>
+        </div>
+
+        <div class="container left">
+            <div class="content">
+                <img src="https://i.pinimg.com/736x/4b/43/3c/4b433cdc1e6a42211f43426d91afad12.jpg" alt="Step 3 Icon" width="100%">
+                <h2>Step 3: Add Questions</h2>
+                <p>Add questions to your quiz. You can add multiple choice, true/false, and other types of questions.</p>
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
+                <img src="https://i.pinimg.com/736x/93/f9/37/93f9372ef3a21c06914abd39ec5b073a.jpg" alt="Step 4 Icon" width="100%">
+                <h2>Step 4: Preview Your Quiz</h2>
+                <p>Preview the quiz to ensure everything is set up the way you want before sharing it with others.</p>
+            </div>
+        </div>
+
+        <div class="container left">
+            <div class="content">
+                <img src="https://i.pinimg.com/736x/2a/7a/90/2a7a904cd8d928c4744c8eb480764435.jpg" alt="Step 5 Icon" width="100%">
+                <h2>Step 5: Share and Enjoy</h2>
+                <p>Once satisfied, share your quiz with friends and enjoy the fun!</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 QuizWiz. All rights reserved.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const containers = document.querySelectorAll('.container');
+            containers.forEach(container => {
+                const containerPosition = container.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (containerPosition < windowHeight * 0.8) {
+                    setTimeout(() => {
+                    container.classList.add('visible');
+                }, 300);
+                }
+            });
+        });
+        
+    </script>
+
+</body>
+</html>

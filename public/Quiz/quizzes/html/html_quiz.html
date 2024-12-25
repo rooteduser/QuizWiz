@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Quiz</title>
+    <link rel="stylesheet" href="html_quiz.css">
+</head>
+<body>
+    <div class="container">
+        <h1>HTML Quiz</h1>
+        <p>Test your knowledge of HTML with this quick quiz!</p>
+        <div id="timer">Time Left: <span id="time">10:00</span></div>
+
+        <form id="quiz-form">
+            <!-- Question 1 -->
+            <div class="question-box">
+                <p>1. What does HTML stand for?</p>
+                <input type="radio" name="q1" value="Hyper Text Markup Language"><label>Hyper Text Markup Language</label><br>
+                <input type="radio" name="q1" value="High Text Markup Language"><label>High Text Markup Language</label><br>
+                <input type="radio" name="q1" value="Home Tool Markup Language"><label>Home Tool Markup Language</label><br>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question-box">
+                <p>2. Which tag is used to create a hyperlink in HTML?</p>
+                <input type="radio" name="q2" value="<a>"><label>&lt;a&gt;</label><br>
+                <input type="radio" name="q2" value="<link>"><label>&lt;link&gt;</label><br>
+                <input type="radio" name="q2" value="<href>"><label>&lt;href&gt;</label><br>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-box">
+                <p>3. Which tag is used to insert an image in HTML?</p>
+                <input type="radio" name="q3" value="<img>"><label>&lt;img&gt;</label><br>
+                <input type="radio" name="q3" value="<image>"><label>&lt;image&gt;</label><br>
+                <input type="radio" name="q3" value="<pic>"><label>&lt;pic&gt;</label><br>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question-box">
+                <p>4. How do you create an ordered list in HTML?</p>
+                <input type="radio" name="q4" value="<ol>"><label>&lt;ol&gt;</label><br>
+                <input type="radio" name="q4" value="<ul>"><label>&lt;ul&gt;</label><br>
+                <input type="radio" name="q4" value="<li>"><label>&lt;li&gt;</label><br>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question-box">
+                <p>5. Which tag is used to define a table row in HTML?</p>
+                <input type="radio" name="q5" value="<tr>"><label>&lt;tr&gt;</label><br>
+                <input type="radio" name="q5" value="<td>"><label>&lt;td&gt;</label><br>
+                <input type="radio" name="q5" value="<th>"><label>&lt;th&gt;</label><br>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question-box">
+                <p>6. Which attribute specifies an image's alternative text?</p>
+                <input type="radio" name="q6" value="alt"><label>alt</label><br>
+                <input type="radio" name="q6" value="src"><label>src</label><br>
+                <input type="radio" name="q6" value="title"><label>title</label><br>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question-box">
+                <p>7. Which element is used to define the document’s title?</p>
+                <input type="radio" name="q7" value="<head>"><label>&lt;head&gt;</label><br>
+                <input type="radio" name="q7" value="<title>"><label>&lt;title&gt;</label><br>
+                <input type="radio" name="q7" value="<meta>"><label>&lt;meta&gt;</label><br>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question-box">
+                <p>8. How do you create a line break in HTML?</p>
+                <input type="radio" name="q8" value="<break>"><label>&lt;break&gt;</label><br>
+                <input type="radio" name="q8" value="<lb>"><label>&lt;lb&gt;</label><br>
+                <input type="radio" name="q8" value="<br>"><label>&lt;br&gt;</label><br>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="question-box">
+                <p>9. Which tag is used to create a dropdown in HTML?</p>
+                <input type="radio" name="q9" value="<select>"><label>&lt;select&gt;</label><br>
+                <input type="radio" name="q9" value="<dropdown>"><label>&lt;dropdown&gt;</label><br>
+                <input type="radio" name="q9" value="<menu>"><label>&lt;menu&gt;</label><br>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="question-box">
+                <p>10. Which tag is used for adding metadata in an HTML document?</p>
+                <input type="radio" name="q10" value="<head>"><label>&lt;head&gt;</label><br>
+                <input type="radio" name="q10" value="<meta>"><label>&lt;meta&gt;</label><br>
+                <input type="radio" name="q10" value="<body>"><label>&lt;body&gt;</label><br>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="navigation">
+                <button type="button" id="submit-btn">Submit Quiz</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="quiz.js"></script>
+    <script>
+        // Timer
+        let timeRemaining = 600; // 10 minutes
+        const timerElement = document.getElementById("time");
+    
+        function updateTimer() {
+            const minutes = Math.floor(timeRemaining / 60);
+            const seconds = timeRemaining % 60;
+            timerElement.textContent = `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+            if (timeRemaining > 0) {
+                timeRemaining--;
+            } else {
+                clearInterval(timerInterval);
+                alert("Time's up!");
+                document.getElementById("submit-btn").click();
+            }
+        }
+    
+        const timerInterval = setInterval(updateTimer, 1000);
+    
+        // Quiz Submission and Scoring
+        document.getElementById("submit-btn").addEventListener("click", () => {
+            const correctAnswers = [
+                "Hyper Text Markup Language", // Q1
+                "<a>",                        // Q2
+                "<img>",                      // Q3
+                "<ol>",                       // Q4
+                "<tr>",                       // Q5
+                "alt",                        // Q6
+                "<title>",                    // Q7
+                "<br>",                       // Q8
+                "<select>",                   // Q9
+                "<meta>",                     // Q10
+            ];
+    
+            const userAnswers = Array.from(document.querySelectorAll("input[type=radio]:checked")).map(input => input.value);
+    
+            // Calculate the score
+            let score = 0;
+            for (let i = 0; i < correctAnswers.length; i++) {
+                if (userAnswers[i] === correctAnswers[i]) {
+                    score++;
+                }
+            }
+    
+            // Display the score
+            alert(`You scored ${score} out of ${correctAnswers.length}!`);
+
+            window.location.href = "html_answers.html"; // Redirects to the answers page
+        });
+    </script>
+    
+</body>
+</html>

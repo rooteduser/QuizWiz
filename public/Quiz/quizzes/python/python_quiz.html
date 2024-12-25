@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Programming Quiz</title>
+    <link rel="stylesheet" href="python_quiz.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Python Programming Quiz</h1>
+        <p>Test your knowledge on Python programming concepts.</p>
+        <div id="timer">Time Left: <span id="time">09:59</span></div>
+        
+        <!-- Question Box -->
+        <div id="question-container" class="question-container">
+            <!-- Question 1 -->
+            <div class="question-box">
+                <p>What is the result of 5 + 3 * 2 in Python?</p>
+                <input type="radio" name="q1" value="10"><label>10</label><br>
+                <input type="radio" name="q1" value="16"><label>16</label><br>
+                <input type="radio" name="q1" value="11"><label>11</label><br>
+                <input type="radio" name="q1" value="13"><label>13</label><br>
+            </div>
+            
+            <!-- Question 2 -->
+            <div class="question-box">
+                <p>Which of the following functions is used to read input from the user in Python?</p>
+                <input type="radio" name="q2" value="input"><label>input()</label><br>
+                <input type="radio" name="q2" value="read"><label>read()</label><br>
+                <input type="radio" name="q2" value="scanf"><label>scanf()</label><br>
+                <input type="radio" name="q2" value="get"><label>get()</label><br>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-box">
+                <p>Which data type is used to store whole numbers in Python?</p>
+                <input type="radio" name="q3" value="int"><label>int</label><br>
+                <input type="radio" name="q3" value="float"><label>float</label><br>
+                <input type="radio" name="q3" value="string"><label>string</label><br>
+                <input type="radio" name="q3" value="bool"><label>bool</label><br>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question-box">
+                <p>Which of the following is a valid Python variable name?</p>
+                <input type="radio" name="q4" value="1variable"><label>1variable</label><br>
+                <input type="radio" name="q4" value="variable_1"><label>variable_1</label><br>
+                <input type="radio" name="q4" value="@variable"><label>@variable</label><br>
+                <input type="radio" name="q4" value="variable 1"><label>variable 1</label><br>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question-box">
+                <p>Which of the following is used to define a function in Python?</p>
+                <input type="radio" name="q5" value="def"><label>def</label><br>
+                <input type="radio" name="q5" value="func"><label>func</label><br>
+                <input type="radio" name="q5" value="function"><label>function</label><br>
+                <input type="radio" name="q5" value="lambda"><label>lambda</label><br>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question-box">
+                <p>What is the output of the following code: print(3 + 4 * 2)?</p>
+                <input type="radio" name="q6" value="11"><label>11</label><br>
+                <input type="radio" name="q6" value="14"><label>14</label><br>
+                <input type="radio" name="q6" value="10"><label>10</label><br>
+                <input type="radio" name="q6" value="7"><label>7</label><br>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question-box">
+                <p>Which of the following is used to create a list in Python?</p>
+                <input type="radio" name="q7" value="[]"><label>[]</label><br>
+                <input type="radio" name="q7" value="{}"><label>{}</label><br>
+                <input type="radio" name="q7" value="()"><label>()</label><br>
+                <input type="radio" name="q7" value="<>"><label><></label><br>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question-box">
+                <p>What does the following Python code do? len("Python")</p>
+                <input type="radio" name="q8" value="Counts characters"><label>Counts characters</label><br>
+                <input type="radio" name="q8" value="Returns boolean"><label>Returns boolean</label><br>
+                <input type="radio" name="q8" value="Returns string length"><label>Returns string length</label><br>
+                <input type="radio" name="q8" value="Converts to uppercase"><label>Converts to uppercase</label><br>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="question-box">
+                <p>Which Python data type is ordered and changeable, and allows duplicate members?</p>
+                <input type="radio" name="q9" value="list"><label>list</label><br>
+                <input type="radio" name="q9" value="tuple"><label>tuple</label><br>
+                <input type="radio" name="q9" value="set"><label>set</label><br>
+                <input type="radio" name="q9" value="dict"><label>dict</label><br>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="question-box">
+                <p>Which of the following is the correct syntax to create a dictionary in Python?</p>
+                <input type="radio" name="q10" value="{}"><label>{}</label><br>
+                <input type="radio" name="q10" value="[]"><label>[]</label><br>
+                <input type="radio" name="q10" value="()"><label>()</label><br>
+                <input type="radio" name="q10" value="<>"><label><></label><br>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="navigation">
+            <button type="button" id="prev-btn">Previous</button>
+            <button type="button" id="next-btn">Next</button>
+        </div>
+
+        <!-- End Quiz Button -->
+        <a href="python_answers.html"><button type="button" id="end-quiz">End Quiz</button></a>
+    </div>
+
+    <script>
+        // Timer functionality
+        let timer = 600; // 10 minutes in seconds
+        const timeDisplay = document.getElementById("time");
+
+        function updateTimer() {
+            let minutes = Math.floor(timer / 60);
+            let seconds = timer % 60;
+            timeDisplay.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            if (timer > 0) {
+                timer--;
+            } else {
+                clearInterval(timerInterval);
+                alert('Time is up!');
+            }
+        }
+        const timerInterval = setInterval(updateTimer, 1000);
+
+        // Quiz navigation (next, previous, etc.)
+        let currentQuestionIndex = 0;
+        const questions = document.querySelectorAll('.question-box');
+        const nextButton = document.getElementById('next-btn');
+        const prevButton = document.getElementById('prev-btn');
+
+        function showQuestion(index) {
+            questions.forEach((q, i) => {
+                q.style.display = i === index ? 'block' : 'none';
+            });
+            prevButton.style.display = index === 0 ? 'none' : 'inline-block';
+            nextButton.style.display = index === questions.length - 1 ? 'none' : 'inline-block';
+        }
+
+        nextButton.addEventListener('click', () => {
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                showQuestion(currentQuestionIndex);
+            }
+        });
+
+        prevButton.addEventListener('click', () => {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                showQuestion(currentQuestionIndex);
+            }
+        });
+
+        // Show first question initially
+        showQuestion(currentQuestionIndex);
+    </script>
+</body>
+</html>

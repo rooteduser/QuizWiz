@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - <%= subject %></title>
+</head>
+<body>
+    <h1><%= subject.charAt(0).toUpperCase() + subject.slice(1) %> Quiz</h1>
+
+    <form id="quiz-form">
+        <% quizData.forEach((question, index) => { %>
+            <div class="question">
+                <p>Q<%= index + 1 %>: <%= question.question %></p>
+                <ul>
+                    <% question.options.forEach(option => { %>
+                        <li>
+                            <label>
+                                <input type="radio" name="question<%= index %>" value="<%= option %>">
+                                <%= option %>
+                            </label>
+                        </li>
+                    <% }) %>
+                </ul>
+            </div>
+        <% }) %>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

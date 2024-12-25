@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Programming Quiz Answers</title>
+    <link rel="stylesheet" href="css++answer.css">
+</head>
+<body>
+    <div class="answers-container">
+        <h1>C++ Programming Quiz - Correct Answers</h1>
+
+        <div class="answer-box">
+            <h2>1. What is the difference between `++i` and `i++` in C++?</h2>
+            <p><strong>Correct Answer:</strong> a) `++i` increments `i` before using it, whereas `i++` increments `i` after using it.</p>
+            <p><strong>Explanation:</strong> `++i` increments the value of `i` before it is used, while `i++` increments the value after using it. This is important when the operator is part of an expression.</p>
+        </div>
+
+        <div class="answer-box">
+            <h2>2. Which of the following is used to allocate memory dynamically in C++?</h2>
+            <p><strong>Correct Answer:</strong> b) `new`</p>
+            <p><strong>Explanation:</strong> In C++, the `new` keyword is used for dynamically allocating memory. `malloc()` and `calloc()` are used in C, not C++.</p>
+        </div>
+
+        <div class="answer-box">
+            <h2>3. What is the purpose of the `virtual` keyword in C++?</h2>
+            <p><strong>Correct Answer:</strong> b) It allows a function to be overridden in a derived class.</p>
+            <p><strong>Explanation:</strong> The `virtual` keyword in C++ ensures that the correct function is called for an object, even if the object is accessed via a pointer to a base class.</p>
+        </div>
+
+        <div class="answer-box">
+            <h2>4. What does the `const` keyword do when applied to a pointer in C++?</h2>
+            <p><strong>Correct Answer:</strong> c) Both the pointer and the object it points to cannot be modified.</p>
+            <p><strong>Explanation:</strong> When the `const` keyword is applied to a pointer, it means the pointer cannot be reassigned to point to another object, and the object it points to cannot be modified.</p>
+        </div>
+
+        <div class="answer-box">
+            <h2>5. Which C++ feature is used to allow a class to use properties and methods from another class?</h2>
+            <p><strong>Correct Answer:</strong> c) Inheritance</p>
+            <p><strong>Explanation:</strong> Inheritance allows one class to inherit the properties and behaviors of another class, enabling code reuse and extension.</p>
+        </div>
+
+        <div class="answer-box">
+            <h2>6. What is the correct syntax to create a reference variable in C++?</h2>
+            <p><strong>Correct Answer:</strong> a) `int &a = 10;`</p>
+            <p><strong>Explanation:</strong> A reference variable in C++ is declared with the `&` symbol, and it must be initialized with a valid object or value.</p>
+        </div>
+
+        <div class="answer-box">
+            <h2>7. What will be the output of the following C++ code?</h2>
+            <pre><code>
+            int x = 5;
+            std::cout << x << ++x << x++ << std::endl;
+            </code></pre>
+            <p><strong>Correct Answer:</strong> b) `5676`</p>
+            <p><strong>Explanation:</strong> The operators `++x` and `x++` have different effects on `x`. `++x` increments the value before using it, while `x++` increments it after using it. The order of evaluation impacts the output.</p>
+        </div>
+
+        <div class="answer-box">
+            <h2>8. Which of the following is used to define a constant in C++?</h2>
+            <p><strong>Correct Answer:</strong> b) `const`</p>
+            <p><strong>Explanation:</strong> The `const` keyword is used to declare constants, which cannot be changed after initialization in C++.</p>
+        </div>
+
+        <div class="answer-box">
+            <h2>9. What is the default value of a static variable in C++?</h2>
+            <p><strong>Correct Answer:</strong> a) Zero</p>
+            <p><strong>Explanation:</strong> In C++, static variables are initialized to zero by default if no other value is provided.</p>
+        </div>
+
+        <div class="answer-box">
+            <h2>10. Which of the following C++ containers allows for fast random access and insertion/deletion at the end?</h2>
+            <p><strong>Correct Answer:</strong> a) `vector`</p>
+            <p><strong>Explanation:</strong> `vector` in C++ provides fast random access and efficient insertion and deletion at the end. It is one of the most commonly used container classes.</p>
+        </div>
+
+        <div class="back-btn">
+            <a href="/"><button>Back to Home</button></a>
+        </div>
+    </div>
+</body>
+</html>

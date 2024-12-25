@@ -1,0 +1,105 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6; /* Light gray for contrast */
+    color: #333;
+}
+
+header {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+    max-width: 600px;
+    margin: 2rem auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Rules Section */
+#rules h2 {
+    color: #6a11cb;
+}
+
+#rules ul {
+    list-style: none;
+    padding: 0;
+}
+
+#rules ul li {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+#rules ul li::before {
+    content: "✓";
+    color: #6a11cb;
+}
+
+/* Checkbox Confirmation */
+#confirmation {
+    margin-top: 1.5rem;
+}
+
+#confirmation input[type="checkbox"] {
+    accent-color: #6a11cb;
+}
+
+/* Start Button */
+#start-button {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+/* Styles for the Start Quiz button */
+#start-quiz-btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(90deg, #2575fc, #6a11cb);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    text-align: center;
+    transition: opacity 0.3s ease, cursor 0.3s ease;
+}
+
+#start-quiz-btn.disabled {
+    background: gray;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+a.disabled {
+    color: #ccc;
+    pointer-events: none;
+    text-decoration: none;
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Programming Quiz</title>
+    <link rel="stylesheet" href="c++quiz.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>C++ Programming Quiz</h1>
+        <p>Test your knowledge on C++ programming concepts.</p>
+        <div id="timer">Time Left: <span id="time">09:59</span></div>
+        
+        <!-- Question Box -->
+        <div id="question-container" class="question-container">
+            <!-- Question 1 -->
+            <div class="question-box">
+                <p>What is the difference between `++i` and `i++` in C++?</p>
+                <input type="radio" name="q1" value="a"><label>++i increments `i` before using it, whereas i++ increments `i` after using it.</label><br>
+                <input type="radio" name="q1" value="b"><label>There is no difference, both increment `i` before using it.</label><br>
+                <input type="radio" name="q1" value="c"><label>Both increment `i` after using it.</label><br>
+                <input type="radio" name="q1" value="d"><label>++i increments `i` after using it, whereas i++ increments `i` before using it.</label><br>
+            </div>
+            
+            <!-- Question 2 -->
+            <div class="question-box">
+                <p>Which of the following is used to allocate memory dynamically in C++?</p>
+                <input type="radio" name="q2" value="a"><label>malloc()</label><br>
+                <input type="radio" name="q2" value="b"><label>new</label><br>
+                <input type="radio" name="q2" value="c"><label>calloc()</label><br>
+                <input type="radio" name="q2" value="d"><label>alloc()</label><br>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-box">
+                <p>What is the purpose of the `virtual` keyword in C++?</p>
+                <input type="radio" name="q3" value="a"><label>It marks a function as private.</label><br>
+                <input type="radio" name="q3" value="b"><label>It allows a function to be overridden in a derived class.</label><br>
+                <input type="radio" name="q3" value="c"><label>It declares a function as static.</label><br>
+                <input type="radio" name="q3" value="d"><label>It prevents a function from being overridden.</label><br>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question-box">
+                <p>What does the `const` keyword do when applied to a pointer in C++?</p>
+                <input type="radio" name="q4" value="a"><label>The pointer cannot be modified.</label><br>
+                <input type="radio" name="q4" value="b"><label>The object the pointer points to cannot be modified.</label><br>
+                <input type="radio" name="q4" value="c"><label>Both the pointer and the object it points to cannot be modified.</label><br>
+                <input type="radio" name="q4" value="d"><label>Neither the pointer nor the object it points to can be modified.</label><br>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question-box">
+                <p>Which C++ feature is used to allow a class to use properties and methods from another class?</p>
+                <input type="radio" name="q5" value="a"><label>Encapsulation</label><br>
+                <input type="radio" name="q5" value="b"><label>Abstraction</label><br>
+                <input type="radio" name="q5" value="c"><label>Inheritance</label><br>
+                <input type="radio" name="q5" value="d"><label>Polymorphism</label><br>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question-box">
+                <p>What is the correct syntax to create a reference variable in C++?</p>
+                <input type="radio" name="q6" value="a"><label>int &a = 10;</label><br>
+                <input type="radio" name="q6" value="b"><label>int a& = 10;</label><br>
+                <input type="radio" name="q6" value="c"><label>int a = &10;</label><br>
+                <input type="radio" name="q6" value="d"><label>int a = 10&;</label><br>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question-box">
+                <p>What will be the output of the following C++ code?</p>
+                <pre><code>
+int x = 5;
+std::cout << x << ++x << x++ << std::endl;
+                </code></pre>
+                <input type="radio" name="q7" value="a"><label>5676</label><br>
+                <input type="radio" name="q7" value="b"><label>5657</label><br>
+                <input type="radio" name="q7" value="c"><label>6557</label><br>
+                <input type="radio" name="q7" value="d"><label>6675</label><br>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question-box">
+                <p>Which of the following is used to define a constant in C++?</p>
+                <input type="radio" name="q8" value="a"><label>const</label><br>
+                <input type="radio" name="q8" value="b"><label>#define</label><br>
+                <input type="radio" name="q8" value="c"><label>static</label><br>
+                <input type="radio" name="q8" value="d"><label>final</label><br>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="question-box">
+                <p>What is the default value of a static variable in C++?</p>
+                <input type="radio" name="q9" value="a"><label>Zero</label><br>
+                <input type="radio" name="q9" value="b"><label>Null</label><br>
+                <input type="radio" name="q9" value="c"><label>Undefined</label><br>
+                <input type="radio" name="q9" value="d"><label>One</label><br>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="question-box">
+                <p>Which of the following C++ containers allows for fast random access and insertion/deletion at the end?</p>
+                <input type="radio" name="q10" value="a"><label>vector</label><br>
+                <input type="radio" name="q10" value="b"><label>deque</label><br>
+                <input type="radio" name="q10" value="c"><label>list</label><br>
+                <input type="radio" name="q10" value="d"><label>set</label><br>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="navigation">
+            <button type="button" id="prev-btn">Previous</button>
+            <button type="button" id="next-btn">Next</button>
+        </div>
+
+        <!-- End Quiz Button -->
+        <a href="css++answer.html"><button type="button" id="end-quiz">End Quiz</button></a>
+    </div>
+
+    <script>
+        // Timer functionality
+        let timer = 600; // 10 minutes in seconds
+        const timeDisplay = document.getElementById("time");
+
+        function updateTimer() {
+            let minutes = Math.floor(timer / 60);
+            let seconds = timer % 60;
+            timeDisplay.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            if (timer > 0) {
+                timer--;
+            } else {
+                clearInterval(timerInterval);
+                alert('Time is up!');
+            }
+        }
+        const timerInterval = setInterval(updateTimer, 1000);
+
+        // Quiz navigation (next, previous, etc.)
+        let currentQuestionIndex = 0;
+        const questions = document.querySelectorAll('.question-box');
+        const nextButton = document.getElementById('next-btn');
+        const prevButton = document.getElementById('prev-btn');
+
+        function showQuestion(index) {
+            questions.forEach((q, i) => {
+                q.style.display = i === index ? 'block' : 'none';
+            });
+            prevButton.style.display = index === 0 ? 'none' : 'inline-block';
+            nextButton.style.display = index === questions.length - 1 ? 'none' : 'inline-block';
+        }
+
+        nextButton.addEventListener('click', () => {
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                showQuestion(currentQuestionIndex);
+            }
+        });
+
+        prevButton.addEventListener('click', () => {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                showQuestion(currentQuestionIndex);
+            }
+        });
+
+        // Show first question initially
+        showQuestion(currentQuestionIndex);
+    </script>
+</body>
+</html>

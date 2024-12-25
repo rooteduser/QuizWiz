@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcard Quiz</title>
+  <link rel="stylesheet" href="/flash-style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Flashcard Generator</h1>
+    <div class="form-container">
+    <form action="/addFlashcard" method="POST" id="flashcardForm">
+      <!-- Set Name Input -->
+      <input type="text" id="setName" placeholder="Enter Set Name" />
+      
+      <!-- Question Input -->
+      <input type="text" id="question" placeholder="Enter Question" />
+      
+      <!-- Answer Input (Textarea for larger field) -->
+      <textarea id="answer" placeholder="Enter Answer" rows="4"></textarea>
+      
+      <!-- Action Buttons -->
+      <div class="button-container">
+        <button id="addFlashcard">Add Flashcard</button>
+        <button id="saveSet">Save Set</button>
+      </div>
+    </form>
+    </div>
+
+    <!-- Saved Flashcard Sets -->
+    <div class="sets-container" id="setsContainer">
+      <h2>Saved Flashcard Sets</h2>
+      <!-- Flashcard sets will appear here dynamically -->
+    </div>
+
+    <!-- Quiz Container (Hidden until quiz starts) -->
+    <div class="quiz-container" id="quizContainer" style="display: none;">
+      <h2 id="quizTitle"></h2>
+      <div id="quizFlashcard" class="flashcard"></div>
+      <button id="nextCard">Next Card</button>
+    </div>
+  </div>
+
+  
+
+  <script src="flash-script.js"></script>
+</body>
+</html>

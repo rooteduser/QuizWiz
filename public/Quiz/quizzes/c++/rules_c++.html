@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Quiz | QuizWiz</title>
+    <link rel="stylesheet" href="rules_c++.css">
+</head>
+<body>
+    <header>
+        <div class="logo">QuizWiz</div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/#features">Features</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="quizzes.html">Quizzes</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="quiz-intro">
+            <h1>C++ Quiz</h1>
+            <p>Welcome to the C++ quiz! This quiz tests your basic understanding of C++, including syntax, data structures, and logic.</p>
+        </section>
+
+        <section id="rules">
+            <h2>Rules</h2>
+            <ul>
+                <li>Ensure you have a stable internet connection.</li>
+                <hr />
+                <li>Do not refresh or close the browser window during the quiz.</li>
+                <hr />
+                <li>Each question has a time limit of 30 seconds.</li>
+                <hr />
+                <li>You cannot go back to a previous question once you proceed.</li>
+                <hr />
+                <li>Scores will be displayed at the end of the quiz.</li>
+            </ul>
+        </section>
+
+        <section id="confirmation">
+            <label>
+                <input type="checkbox" id="confirm-rules">
+                I have read and understood the rules.
+            </label>
+        </section>
+
+        <section id="start-button">
+            <!-- Disabled link initially -->
+            <a href="c++quiz.html" id="start-quiz-btn" class="disabled" onclick="return false;">Start Quiz</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 QuizWiz | All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript to handle enabling the Start Quiz button when checkbox is checked
+        const checkbox = document.getElementById('confirm-rules');
+        const startButton = document.getElementById('start-quiz-btn');
+
+        // Listen for changes to the checkbox
+        checkbox.addEventListener('change', function() {
+            if (checkbox.checked) {
+                startButton.classList.remove('disabled');  // Remove 'disabled' class
+                startButton.style.pointerEvents = 'auto'; // Enable click
+                startButton.setAttribute('onclick', 'window.location.href="python_quiz.html"'); // Allow navigation
+            } else {
+                startButton.classList.add('disabled');   // Add 'disabled' class
+                startButton.style.pointerEvents = 'none'; // Disable click
+                startButton.removeAttribute('onclick'); // Prevent navigation
+            }
+        });
+    </script>
+</body>
+</html>
